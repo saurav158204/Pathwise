@@ -61,4 +61,14 @@ Track applications through Saved → Applied → Assessment → Interview → Of
 - **[PDF.js](https://mozilla.github.io/pdf.js/)** and **[mammoth.js](https://github.com/mwilliamson/mammoth.js)**, loaded from cdnjs at runtime, for resume text extraction
 
 ## Architecture
-# Pathwise
+
+The **deterministic engine layer** (`js/engine/`) never calls an LLM — every score is reproducible from stored inputs. The **AI layer** (`resumeParser.js`, `copilot.js`) only handles language understanding and explanation, and is always optional: the app runs fully without it, just with a simpler resume parser and no chat assistant.
+
+## Run locally
+
+Any static file server works (this app uses ES module imports, which browsers block under the `file://` protocol, so you can't just double-click `index.html`).
+
+```bash
+python -m http.server 8000
+# or
+npx serve .
