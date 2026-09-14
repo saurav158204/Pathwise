@@ -64,11 +64,15 @@ Track applications through Saved → Applied → Assessment → Interview → Of
 
 The **deterministic engine layer** (`js/engine/`) never calls an LLM — every score is reproducible from stored inputs. The **AI layer** (`resumeParser.js`, `copilot.js`) only handles language understanding and explanation, and is always optional: the app runs fully without it, just with a simpler resume parser and no chat assistant.
 
-## Run locally
+## Deploy
 
-Any static file server works (this app uses ES module imports, which browsers block under the `file://` protocol, so you can't just double-click `index.html`).
+No build step — deploy as-is with one click, or manually to any static host.
 
-```bash
-python -m http.server 8000
-# or
-npx serve .
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/saurav158204/Pathwise)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/saurav158204/Pathwise)
+
+Manual options:
+
+- **Vercel**: import the repo at [vercel.com/new](https://vercel.com/new), framework preset "Other" — no build command needed.
+- **Netlify**: connect the repo at [app.netlify.com](https://app.netlify.com) for continuous deploys, or drag the folder onto [app.netlify.com/drop](https://app.netlify.com/drop) for a one-off deploy.
+- **GitHub Pages**: Settings → Pages → deploy from the `main` branch, root folder.
