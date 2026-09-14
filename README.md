@@ -7,6 +7,11 @@ Pathwise is an **AI career decision engine** for students and early-career job s
 Every score the app shows is deterministic and explainable — it can always show its work (which skills matched, which are missing, why a company ranks where it does). AI is used only where it genuinely helps — reading an unstructured resume, and answering open-ended questions grounded in the candidate's own computed data — never to invent a number.
 
 ---
+## Live Demo
+
+**[pathwise-webapp.vercel.app](https://pathwise-webapp.vercel.app)** — try it right now, no installation needed. Click "Try a Sample Candidate" for an instant look, or upload your own resume to see your actual scores.
+
+> Running standalone (not inside Claude), so resume parsing uses the keyword-based fallback and there's no AI copilot — see [Data & AI features](#data--ai-features) below for what changes outside Claude.
 
 ## What it does
 
